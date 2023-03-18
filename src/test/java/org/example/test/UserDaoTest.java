@@ -14,9 +14,9 @@ public class UserDaoTest {
 
     private final UserDaoImpl userDao = new UserDaoImpl();
 
-    private static final List<User> new_users = List.of(
-            new User("Ola"),
-            new User("Polina"));
+    private static final List<User> newUsers = List.of(
+            new User("Anna"),
+            new User("Anton"));
 
     @Test
     @DisplayName("Возвращает пользователя из списка")
@@ -35,6 +35,6 @@ public class UserDaoTest {
     @Test
     @DisplayName("Список всех пользователей")
     public void getUsersList () {
-        assertEquals(new_users, userDao.getAllUsers());
+        assertEquals(newUsers, userDao.getAllUsers());
     }
 }

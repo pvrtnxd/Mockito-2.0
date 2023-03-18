@@ -25,7 +25,7 @@ public class UserServiceTest {
     @Test
     @DisplayName("Возвращает true если пользователь в списке")
     public void trueReturner() {
-        User user = new User("Anna");
+        User user = new User("Olga");
         when(userDao.getUsersByName(user.getName())).thenReturn(user);
         assertTrue(userService.checkUserExist(user));
     }
@@ -33,7 +33,7 @@ public class UserServiceTest {
     @Test
     @DisplayName("Возвращает false если пользователь в списке нет")
     public void falseReturner() {
-        User user = new User("Lion");
+        User user = new User("Maksim");
         when(userDao.getUsersByName(user.getName())).thenReturn(null);
         assertFalse(userService.checkUserExist(user));
     }
